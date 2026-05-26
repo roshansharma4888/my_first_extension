@@ -1,6 +1,21 @@
-#To compile c file
+## Build and Installation
+
+### Compile the C file
+
+```bash
 make
-#To compile *
-sudo make install 
-#To run test cases(results are tested against expected)
-make installcheck 
+```
+
+### Install
+
+```bash
+sudo make install
+```
+
+### Run Test Cases
+
+```bash
+make installcheck
+```
+
+Tests are automatically checked against expected results.
