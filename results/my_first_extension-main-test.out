@@ -1,0 +1,12 @@
+CREATE EXTENSION my_first_extension;
+SELECT * FROM my_first_extension_table;
+ id |  my_string   
+----+--------------
+  1 | Hello, World
+(1 row)
+
+DROP EXTENSION my_first_extension;
+SELECT * FROM my_first_extension_table;
+ERROR:  relation "my_first_extension_table" does not exist
+LINE 1: SELECT * FROM my_first_extension_table;
+                      ^

@@ -1,0 +1,29 @@
+CREATE EXTENSION my_first_extension;
+-- C function should return 2
+SELECT my_two();
+ my_two 
+--------
+      2
+(1 row)
+
+-- Verify return type
+SELECT pg_typeof(my_two());
+ pg_typeof 
+-----------
+ integer
+(1 row)
+
+-- Sanity: my_one + my_two = 3
+SELECT my_one() + my_two() AS total;
+ total 
+-------
+     3
+(1 row)
+
+DROP EXTENSION my_first_extension;
+-- Both should be gone
+SELECT my_two();
+ERROR:  function my_two() does not exist
+LINE 1: SELECT my_two();
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.

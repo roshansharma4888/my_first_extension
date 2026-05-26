@@ -1,0 +1,22 @@
+CREATE EXTENSION my_first_extension;
+-- Function should return 1
+SELECT my_one();
+ my_one 
+--------
+      1
+(1 row)
+
+-- Verify return type is integer
+SELECT pg_typeof(my_one());
+ pg_typeof 
+-----------
+ integer
+(1 row)
+
+DROP EXTENSION my_first_extension;
+-- Function should be gone after dropping extension
+SELECT my_one();
+ERROR:  function my_one() does not exist
+LINE 1: SELECT my_one();
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.

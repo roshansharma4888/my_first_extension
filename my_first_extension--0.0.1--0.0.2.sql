@@ -1,0 +1,10 @@
+CREATE FUNCTION my_one()
+RETURNS INT
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+    RETURN 1;
+END;
+$$;
+

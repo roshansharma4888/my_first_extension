@@ -1,0 +1,5 @@
+comment = 'My Very First Extension'
+default_version = '0.0.3'
+module_pathname = '$libdir/my_first_extension'
+
+
