@@ -1,3 +1,6 @@
-make --->To compile c file
-sudo make install --->To compile *
-make installcheck --->To run test cases(results are tested against expected)
+#To compile c file
+make
+#To compile *
+sudo make install 
+#To run test cases(results are tested against expected)
+make installcheck 
